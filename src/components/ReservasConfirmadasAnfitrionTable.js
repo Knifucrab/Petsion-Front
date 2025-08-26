@@ -317,7 +317,7 @@ export default function ReservasConfirmadasAnfitrionTable() {
     if (storedUsuarioLogeado.id) {
       setLoading(true);
       axios
-        .post(`https://api-petsion.onrender.com/reservas/anfitrionconfirm`, {
+        .post(`https://petsion-api.vercel.app/reservas/anfitrionconfirm`, {
           anfitrion: storedUsuarioLogeado.id,
         })
         .then((response) => {

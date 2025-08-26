@@ -44,7 +44,7 @@ const PerfilAnfitrion = () => {
     if (storedUsuarioLogeado.id) {
       axios
         .get(
-          `https://api-petsion.onrender.com/anfitrion/${storedUsuarioLogeado.id}`
+          `https://petsion-api.vercel.app/anfitrion/${storedUsuarioLogeado.id}`
         )
         .then((response) => {
           setDatosAnfitrion(response.data);
@@ -84,7 +84,7 @@ const PerfilAnfitrion = () => {
 
     axios
       .patch(
-        `https://api-petsion.onrender.com/anfitrion/${storedUsuarioLogeado.id}`,
+        `https://petsion-api.vercel.app/anfitrion/${storedUsuarioLogeado.id}`,
         dataToUpdate // Envía solo los campos modificados
       )
       .then((response) => {

@@ -51,7 +51,7 @@ export const useForm = (initialForm, validateForm) => {
       // Validamos que el objeto errors donde guardamos los errores de las validaciones este vacio lo que significa que todos los campos han sido llenados correctamente.
       try {
         await axios.post(
-          "https://api-petsion.onrender.com/anfitrion/register",
+          "https://petsion-api.vercel.app/anfitrion/register",
           {
             username: form.username,
             password: form.password,

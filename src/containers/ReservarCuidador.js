@@ -62,7 +62,7 @@ const ReservarCuidador = () => {
     if (validate()) {
       try {
         setLoading(true);
-        await axios.post("https://api-petsion.onrender.com/reservas/crear", {
+        await axios.post("https://petsion-api.vercel.app/reservas/crear", {
           user: formData.user,
           anfitrion: formData.anfitrion,
           tipoDeServicio: formData.tipoDeServicio,
@@ -176,7 +176,7 @@ const ReservarCuidador = () => {
     if (cuidadorId) {
       setLoading(true);
       axios
-        .get(`https://api-petsion.onrender.com/anfitrion/${cuidadorId}`)
+        .get(`https://petsion-api.vercel.app/anfitrion/${cuidadorId}`)
         .then((response) => {
           // Guardar los datos en el estado
           setDatosCuidador(response.data);
@@ -205,7 +205,7 @@ const ReservarCuidador = () => {
   useEffect(() => {
     if (usuarioLogeadoLocal && usuarioLogeadoLocal.id !== formData.user) {
       axios
-        .post(`https://api-petsion.onrender.com/mascota/listar`, {
+        .post(`https://petsion-api.vercel.app/mascota/listar`, {
           user: usuarioLogeadoLocal.id,
         })
         .then((response) => {

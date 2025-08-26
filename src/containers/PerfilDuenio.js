@@ -38,7 +38,7 @@ const PerfilDuenio = () => {
     if (storedUsuarioLogeado.id) {
       setLoading(true);
       axios
-        .get(`https://api-petsion.onrender.com/user/${storedUsuarioLogeado.id}`)
+        .get(`https://petsion-api.vercel.app/user/${storedUsuarioLogeado.id}`)
         .then((response) => {
           // Guardar los datos en el estado
           setDatosAnfitrion(response.data);
@@ -48,7 +48,7 @@ const PerfilDuenio = () => {
 
       setLoading(true);
       axios
-        .post(`https://api-petsion.onrender.com/mascota/listar`, {
+        .post(`https://petsion-api.vercel.app/mascota/listar`, {
           user: storedUsuarioLogeado.id,
         })
         .then((response) => {

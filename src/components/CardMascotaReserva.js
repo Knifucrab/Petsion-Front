@@ -10,7 +10,7 @@ const CardMascotaReserva = ({ nombre, tipoMascota, id, setLoading }) => {
   // const borrarMascota = () => {
   //   try {
   //     setLoading(true);
-  //     axios.post("https://api-petsion.onrender.com/mascota/eliminar", {
+  //     axios.post("https://petsion-api.vercel.app/mascota/eliminar", {
   //       id: id,
   //     });
   //   } catch (error) {

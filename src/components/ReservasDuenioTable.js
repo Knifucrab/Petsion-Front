@@ -281,7 +281,7 @@ export default function ReservasDuenioTable() {
       setLoading(true);
 
       axios
-        .post(`https://api-petsion.onrender.com/reservas/user`, {
+        .post(`https://petsion-api.vercel.app/reservas/user`, {
           user: storedUsuarioLogeado.id,
         })
         .then((response) => {

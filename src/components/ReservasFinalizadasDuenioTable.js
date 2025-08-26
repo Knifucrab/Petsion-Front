@@ -63,7 +63,7 @@ function Row(props) {
     if (storedUsuarioLogeado.id) {
       console.log(`userRating usado en funcion: ${newValue}`);
       axios
-        .post(`https://api-petsion.onrender.com/reservas/calificar`, {
+        .post(`https://petsion-api.vercel.app/reservas/calificar`, {
           reservaId: row._id,
           rating: newValue,
         })
@@ -393,7 +393,7 @@ export default function ReservasFinalizadasDuenioTable() {
     if (storedUsuarioLogeado.id) {
       setLoading(true);
       axios
-        .post(`https://api-petsion.onrender.com/reservas/finalizadas/user`, {
+        .post(`https://petsion-api.vercel.app/reservas/finalizadas/user`, {
           user: storedUsuarioLogeado.id,
         })
         .then((response) => {

@@ -317,7 +317,7 @@ export default function ReservasConfirmadasDuenioTable() {
     if (storedUsuarioLogeado.id) {
       setLoading(true);
       axios
-        .post(`https://api-petsion.onrender.com/reservas/userconfirm`, {
+        .post(`https://petsion-api.vercel.app/reservas/userconfirm`, {
           user: storedUsuarioLogeado.id,
         })
         .then((response) => {

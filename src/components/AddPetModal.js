@@ -40,7 +40,7 @@ const AddPetModal = ({ show, handleClose, handleRerender }) => {
     if (validate()) {
       try {
         setLoading(true);
-        await axios.post("https://api-petsion.onrender.com/mascota/register", {
+        await axios.post("https://petsion-api.vercel.app/mascota/register", {
           user: formData.user,
           tipoMascota: formData.tipoMascota,
           nombre: formData.nombre,

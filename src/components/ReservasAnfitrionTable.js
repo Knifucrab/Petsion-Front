@@ -45,7 +45,7 @@ function Row(props) {
   const navigate = useNavigate();
   const aceptarReserva = () => {
     try {
-      axios.post(`https://api-petsion.onrender.com/reservas/confirmar`, {
+      axios.post(`https://petsion-api.vercel.app/reservas/confirmar`, {
         confirmado: true,
         id: row._id,
       });
@@ -58,7 +58,7 @@ function Row(props) {
 
   const rechazarReserva = () => {
     try {
-      axios.post(`https://api-petsion.onrender.com/reservas/rechazar`, {
+      axios.post(`https://petsion-api.vercel.app/reservas/rechazar`, {
         id: row._id,
       });
       handleRerender();
@@ -328,7 +328,7 @@ export default function ReservasAnfitrionTable() {
     if (storedUsuarioLogeado.id) {
       setLoading(true);
       axios
-        .post(`https://api-petsion.onrender.com/reservas/anfitrion`, {
+        .post(`https://petsion-api.vercel.app/reservas/anfitrion`, {
           anfitrion: storedUsuarioLogeado.id,
         })
         .then((response) => {

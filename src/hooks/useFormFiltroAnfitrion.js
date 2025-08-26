@@ -14,7 +14,7 @@ export const useForm = (initialForm, setLoading) => {
       setLoading(true);
       // Aquí realizas la solicitud a tu API utilizando Axios
       const response = await axios.post(
-        "https://api-petsion.onrender.com/anfitrion/filtrado",
+        "https://petsion-api.vercel.app/anfitrion/filtrado",
         {
           admitePerro: form.admitePerro,
           admiteGato: form.admiteGato,
