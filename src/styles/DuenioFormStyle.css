@@ -1,0 +1,8 @@
+.inputStyle {
+  width: 100% !important;
+  padding: 8px !important;
+  border: 1px solid #4c78b5 !important;
+  border-radius: 5px !important;
+  box-sizing: border-box !important;
+  margin-bottom: 15px !important;
+}

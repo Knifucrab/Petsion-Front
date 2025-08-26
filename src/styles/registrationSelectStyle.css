@@ -1,0 +1,28 @@
+.registrationSelectStyle {
+  height: 100vh; /* Asegurando que el contenedor tenga la altura de la vista */
+  overflow: hidden; /* Evitando el desbordamiento del contenedor */
+}
+
+.textTitle {
+  font-weight: 600;
+  font-size: large;
+}
+
+.vh-100 {
+  height: 100vh; /* Asegurando que el contenedor tenga la altura de la vista */
+}
+
+.LoginImagen {
+  background-size: cover; /* Asegurando que la imagen de fondo cubra todo el contenedor */
+  background-position: center; /* Centrar la imagen de fondo */
+}
+
+.h-custom-0 {
+  height: calc(100% - 56px); /* Ajustar la altura considerando el navbar */
+}
+
+@media (max-width: 575px) {
+  .vh-100-xs {
+    height: 100vh;
+  }
+}
